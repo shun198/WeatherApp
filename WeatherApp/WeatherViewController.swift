@@ -8,9 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol InputPickerViewDataDelegate {
+    func inputCompleted(data:String)
+}
+
+class WeatherViewController: UIViewController {
     
     let city = ["札幌","室蘭","仙台","さいたま","東京","横浜"]
+    var weatherDetail:WeatherDetailViewController?
+    var delegate:InputPickerViewDataDelegate?
     
     @IBOutlet weak var weatherPicker: UIPickerView!
     
@@ -23,23 +29,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showWeatherButton(_ sender: Any) {
+        
     }
     
-
 }
 
-struct DataModel {
-    let cityModel = [""]
-}
 
-extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource {
+
+extension WeatherViewController:UIPickerViewDelegate,UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return city.count
+        let data = city.count
+        return data
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -47,6 +52,16 @@ extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource {
         return cities
     }
 
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let row1 = pickerView.selectedRow(inComponent: 0)
+        let cities = self.pickerView(pickerView, titleForRow: row1, forComponent: 0)
+        if let data = cities {
+        delegate?.inputCompleted(data: data)
+        print(data)
+        }
+    }
+    
+    
 
 }
 
