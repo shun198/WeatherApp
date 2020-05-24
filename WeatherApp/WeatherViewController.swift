@@ -8,15 +8,9 @@
 
 import UIKit
 
-protocol InputPickerViewDataDelegate {
-    func inputCompleted(data:String)
-}
-
 class WeatherViewController: UIViewController {
     
     let city = ["札幌","室蘭","仙台","さいたま","東京","横浜"]
-    var weatherDetail:WeatherDetailViewController?
-    var delegate:InputPickerViewDataDelegate?
     
     @IBOutlet weak var weatherPicker: UIPickerView!
     
@@ -29,7 +23,7 @@ class WeatherViewController: UIViewController {
     }
 
     @IBAction func showWeatherButton(_ sender: Any) {
-        
+        //weatherpickerの値と配列の値が一致する時の処理を書く
     }
     
 }
@@ -51,17 +45,17 @@ extension WeatherViewController:UIPickerViewDelegate,UIPickerViewDataSource {
         let cities = city[row]
         return cities
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let row1 = pickerView.selectedRow(inComponent: 0)
-        let cities = self.pickerView(pickerView, titleForRow: row1, forComponent: 0)
-        if let data = cities {
-        delegate?.inputCompleted(data: data)
-        print(data)
+        let row1 = city[row]
+        for n in city {
+            if row1 == n {
+                print(n+"の天気")
+//                let weatherDetail = WeatherDetailViewController()
+//                weatherDetail.selectedCityTitle.text = n+"の天気"
+            }
         }
     }
-    
-    
 
 }
 

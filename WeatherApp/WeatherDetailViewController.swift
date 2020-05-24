@@ -18,6 +18,14 @@ class WeatherDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let weather = WeatherViewController()
+        //最初札幌がpickerの中で一番はじめに選ばれるため、タイトルは札幌の天気になる
+//        let city = weather.city
+        let pickerView = UIPickerView()
+        let row:Int = 0
+        let picker = weather.pickerView(pickerView, titleForRow: row, forComponent: 0)
+        print(picker!+"の天気テスト")
+        
         
         //当日の日付
         let dt = Date()
@@ -25,16 +33,8 @@ class WeatherDetailViewController: UIViewController {
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MMMd", options: 0, locale: Locale(identifier: "ja_JP"))
         todaysDate.text = dateFormatter.string(from: dt)
     }
-    
 }
+
+        
     
-//pickerviewで選んだ都市をselectedCityTitleに代入
-extension WeatherDetailViewController: InputPickerViewDataDelegate {
-    func inputCompleted(data: String) {
-        selectedCityTitle.text! = "\(data)の天気"
-        print(data)
-    }
-    
-    
-}
 
