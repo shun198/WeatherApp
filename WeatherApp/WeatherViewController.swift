@@ -11,6 +11,7 @@ import UIKit
 class WeatherViewController: UIViewController {
     
     var city = ["札幌","室蘭","仙台","さいたま","東京","横浜"]
+    var selectedCity = "札幌"
     
     @IBOutlet weak var weatherPicker: UIPickerView!
     
@@ -25,9 +26,7 @@ class WeatherViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WeatherDetailViewController" {
             let weatherDetail = segue.destination as! WeatherDetailViewController
-//            weatherDetail.selectedCityTitle.text = "\(city[0])の天気"
-           let selectedRow = self.weatherPicker.selectedRow(inComponent: 0)
-           weatherDetail.selectedCityTitle.text! = self.city[selectedRow] + "の天気"
+            weatherDetail.selectedCity = self.selectedCity
         }
     }
 
@@ -56,12 +55,9 @@ extension WeatherViewController:UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let row1 = city[row]
-        for n in city {
-            if row1 == n {
-                print(n+"の天気")
-            }
-        }
+        let selected = city[row]
+        self.selectedCity = selected
+        print(selected)
     }
 
 }

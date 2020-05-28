@@ -14,6 +14,7 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet weak var todaysDate: UILabel!
     @IBOutlet weak var highestTemperature: UILabel!
     @IBOutlet weak var lowestTemperature: UILabel!
+    var selectedCity:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class WeatherDetailViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MMMd", options: 0, locale: Locale(identifier: "ja_JP"))
         todaysDate.text = dateFormatter.string(from: dt)
+        selectedCityTitle.text = selectedCity!+"の天気"
     }
 }
 
