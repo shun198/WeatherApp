@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
-    let city = ["札幌","室蘭","仙台","さいたま","東京","横浜"]
+    var city = ["札幌","室蘭","仙台","さいたま","東京","横浜"]
     
     @IBOutlet weak var weatherPicker: UIPickerView!
     
@@ -21,9 +21,18 @@ class WeatherViewController: UIViewController {
         weatherPicker.delegate = self
         weatherPicker.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WeatherDetailViewController" {
+            let weatherDetail = segue.destination as! WeatherDetailViewController
+//            weatherDetail.selectedCityTitle.text = "\(city[0])の天気"
+           let selectedRow = self.weatherPicker.selectedRow(inComponent: 0)
+           weatherDetail.selectedCityTitle.text! = self.city[selectedRow] + "の天気"
+        }
+    }
 
     @IBAction func showWeatherButton(_ sender: Any) {
-        //weatherpickerの値と配列の値が一致する時の処理を書く
+        
     }
     
 }
@@ -51,8 +60,6 @@ extension WeatherViewController:UIPickerViewDelegate,UIPickerViewDataSource {
         for n in city {
             if row1 == n {
                 print(n+"の天気")
-//                let weatherDetail = WeatherDetailViewController()
-//                weatherDetail.selectedCityTitle.text = n+"の天気"
             }
         }
     }

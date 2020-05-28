@@ -38,7 +38,7 @@
                                 </state>
                                 <connections>
                                     <action selector="showWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beZ-ux-wk1"/>
-                                    <segue destination="54b-Cj-Cbq" kind="show" id="mw1-fJ-oGe"/>
+                                    <segue destination="54b-Cj-Cbq" kind="show" identifier="" id="mw1-fJ-oGe"/>
                                 </connections>
                             </button>
                         </subviews>
