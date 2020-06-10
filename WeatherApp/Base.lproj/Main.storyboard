@@ -96,17 +96,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〇〇℃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0s-dE-EWB">
+                                <rect key="frame" x="280" y="337.5" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〇〇℃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-RY-gcz">
+                                <rect key="frame" x="280" y="437.5" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お天気の詳細が表示されます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-gY-cLU">
+                                <rect key="frame" x="94.5" y="538" width="225.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="jIu-gY-cLU" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="100" id="2GC-s5-Tnb"/>
+                            <constraint firstItem="pBm-RY-gcz" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="100" id="6u2-Lx-NzI"/>
                             <constraint firstItem="tks-tY-ha6" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" id="7gt-pD-rV9"/>
+                            <constraint firstItem="N0s-dE-EWB" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="100" id="FZ3-D2-jqt"/>
                             <constraint firstItem="5c9-My-kGD" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" id="OPU-RM-lrd"/>
                             <constraint firstItem="5c9-My-kGD" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-240" id="RCq-GB-omr"/>
                             <constraint firstItem="WTJ-wB-cVo" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="-100" id="bhC-1n-yjw"/>
                             <constraint firstItem="YS4-jn-NXK" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" id="h6P-xA-Z1h"/>
                             <constraint firstItem="WTJ-wB-cVo" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-100" id="lTo-5H-t5u"/>
                             <constraint firstItem="tks-tY-ha6" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="-100" id="miT-lx-ITV"/>
+                            <constraint firstItem="jIu-gY-cLU" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" id="ol2-7k-X0g"/>
+                            <constraint firstItem="pBm-RY-gcz" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" id="qIC-qs-DYI"/>
                             <constraint firstItem="YS4-jn-NXK" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-200" id="z03-3C-UMj"/>
+                            <constraint firstItem="N0s-dE-EWB" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-100" id="zYx-cK-jRD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hCR-Ja-4jc"/>
                     </view>
@@ -114,15 +138,16 @@
                         <barButtonItem key="backBarButtonItem" title="戻る" id="AmC-Gn-AoI"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="highestTemperature" destination="WTJ-wB-cVo" id="waF-hH-hMv"/>
-                        <outlet property="lowestTemperature" destination="tks-tY-ha6" id="aOX-3Z-a0V"/>
+                        <outlet property="highestTemperature" destination="N0s-dE-EWB" id="uwQ-fr-ixL"/>
+                        <outlet property="lowestTemperature" destination="pBm-RY-gcz" id="ZlY-zR-Zez"/>
                         <outlet property="selectedCityTitle" destination="5c9-My-kGD" id="WtR-u8-0kP"/>
                         <outlet property="todaysDate" destination="YS4-jn-NXK" id="4nG-sL-GUK"/>
+                        <outlet property="weatherDetail" destination="jIu-gY-cLU" id="dd2-0W-bF6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDX-ZN-D1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363.768115942029" y="152.67857142857142"/>
+            <point key="canvasLocation" x="2362.3188405797105" y="152.67857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5pF-yt-ezj">
