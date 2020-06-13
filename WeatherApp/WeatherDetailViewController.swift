@@ -29,6 +29,7 @@ class WeatherDetailViewController: UIViewController {
         if let cityName = selectedCity?.name {
             selectedCityTitle.text = cityName+"の天気"
         }
+        getWeatherData(city: selectedCity!)
         
     }
     
@@ -59,7 +60,8 @@ extension WeatherDetailViewController {
                 //本日の日付を取得
                 if let forecasts = result["forecasts"] as? [Any],
                     let forecast = forecasts[0] as? [String: Any],
-                    let date = forecast["date"] as? String {
+                    let date = forecast["date"] as? String
+                {
                     self.todaysDate.text = date
                 }
                 
@@ -97,7 +99,6 @@ extension WeatherDetailViewController {
             }
         }
     }
-    
     
 }
 
