@@ -78,7 +78,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当日の日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-jn-NXK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="明日の日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-jn-NXK">
                                 <rect key="frame" x="163.5" y="237.5" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最低気温" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tks-tY-ha6">
-                                <rect key="frame" x="72" y="437.5" width="70" height="21"/>
+                                <rect key="frame" x="72" y="387.5" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,23 +103,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〇〇℃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-RY-gcz">
-                                <rect key="frame" x="280" y="437.5" width="54.5" height="21"/>
+                                <rect key="frame" x="280" y="387.5" width="54.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お天気の詳細が表示されます" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-gY-cLU">
-                                <rect key="frame" x="94.5" y="538" width="225.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お天気の詳細が表示されます" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-gY-cLU">
+                                <rect key="frame" x="57" y="592.5" width="300" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5o4-xE-2SE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jIu-gY-cLU" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="100" id="2GC-s5-Tnb"/>
+                            <constraint firstItem="jIu-gY-cLU" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="150" id="2GC-s5-Tnb"/>
                             <constraint firstItem="pBm-RY-gcz" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="100" id="6u2-Lx-NzI"/>
-                            <constraint firstItem="tks-tY-ha6" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" id="7gt-pD-rV9"/>
+                            <constraint firstItem="tks-tY-ha6" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-50" id="7gt-pD-rV9"/>
                             <constraint firstItem="N0s-dE-EWB" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="100" id="FZ3-D2-jqt"/>
                             <constraint firstItem="5c9-My-kGD" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" id="OPU-RM-lrd"/>
                             <constraint firstItem="5c9-My-kGD" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-240" id="RCq-GB-omr"/>
@@ -128,7 +131,7 @@
                             <constraint firstItem="WTJ-wB-cVo" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-100" id="lTo-5H-t5u"/>
                             <constraint firstItem="tks-tY-ha6" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" constant="-100" id="miT-lx-ITV"/>
                             <constraint firstItem="jIu-gY-cLU" firstAttribute="centerX" secondItem="mws-cG-LCR" secondAttribute="centerX" id="ol2-7k-X0g"/>
-                            <constraint firstItem="pBm-RY-gcz" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" id="qIC-qs-DYI"/>
+                            <constraint firstItem="pBm-RY-gcz" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-50" id="qIC-qs-DYI"/>
                             <constraint firstItem="YS4-jn-NXK" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-200" id="z03-3C-UMj"/>
                             <constraint firstItem="N0s-dE-EWB" firstAttribute="centerY" secondItem="mws-cG-LCR" secondAttribute="centerY" constant="-100" id="zYx-cK-jRD"/>
                         </constraints>
@@ -141,7 +144,7 @@
                         <outlet property="highestTemperature" destination="N0s-dE-EWB" id="uwQ-fr-ixL"/>
                         <outlet property="lowestTemperature" destination="pBm-RY-gcz" id="ZlY-zR-Zez"/>
                         <outlet property="selectedCityTitle" destination="5c9-My-kGD" id="WtR-u8-0kP"/>
-                        <outlet property="todaysDate" destination="YS4-jn-NXK" id="4nG-sL-GUK"/>
+                        <outlet property="tomorrowsDate" destination="YS4-jn-NXK" id="1PD-G1-ZHK"/>
                         <outlet property="weatherDetail" destination="jIu-gY-cLU" id="dd2-0W-bF6"/>
                     </connections>
                 </viewController>
